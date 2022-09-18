@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preactica2Unidad2", "Preactica2Unidad2\Preactica2Unidad2.csproj", "{044BE0AC-A2FE-4A36-A31B-7A4044EE1FD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preactica2Unidad2Tests", "Preactica2Unidad2Tests\Preactica2Unidad2Tests.csproj", "{4754B2AC-CAF1-4232-8358-26C19CCCC5BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{044BE0AC-A2FE-4A36-A31B-7A4044EE1FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044BE0AC-A2FE-4A36-A31B-7A4044EE1FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044BE0AC-A2FE-4A36-A31B-7A4044EE1FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044BE0AC-A2FE-4A36-A31B-7A4044EE1FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4754B2AC-CAF1-4232-8358-26C19CCCC5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4754B2AC-CAF1-4232-8358-26C19CCCC5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4754B2AC-CAF1-4232-8358-26C19CCCC5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4754B2AC-CAF1-4232-8358-26C19CCCC5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5056E8EE-B704-445D-A55F-0103A845A8F0}
+	EndGlobalSection
+EndGlobal
