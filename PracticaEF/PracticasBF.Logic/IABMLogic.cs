@@ -10,9 +10,9 @@ namespace PracticasBF.Logic
     internal interface IABMLogic<T>
     {
         List<T> GetAll();
-        void add(T newEmployees);
+        void add(T newAdd);
         void Delete(int id);
-        void Update(T employees);
+        void Update(T update);
 
     }
 }
