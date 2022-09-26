@@ -115,7 +115,7 @@ namespace PracticaEF.UI
 
                         default:
 
-                            Console.WriteLine("Ingreso un valor correcto");
+                            Console.WriteLine("Ingreso un valor incorrecto");
                         
                             break;
                     }
