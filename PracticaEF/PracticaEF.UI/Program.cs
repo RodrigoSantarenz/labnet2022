@@ -13,12 +13,10 @@ namespace PracticaEF.UI
     {
         static void Main(string[] args)
         {
-
             CustomersIntermedia customersIntermedia = new CustomersIntermedia();
             EmployeesIntermedia employeesIntermedia = new EmployeesIntermedia();
 
             int continuar;
-            
             do
             {
 
@@ -68,15 +66,15 @@ namespace PracticaEF.UI
                             int num2 = int.Parse(Console.ReadLine());
 
                            
-                            employeesIntermedia.deleteEmployee(num2);
+                            employeesIntermedia.Delete(num2);
 
                             Console.Clear();
 
-                            Console.WriteLine($"El empleado con el id: {num2} ha sido dado de bajar con exito\n");
+                            Console.WriteLine($"El empleado con el id: {num2} ha sido dado de baja con exito\n");
 
                             employeesIntermedia.emplooyesList();
                         
-                            break;
+                        break;
 
                         case 3:
                             Console.Clear();
@@ -85,6 +83,7 @@ namespace PracticaEF.UI
 
                             Console.Write("Ingrese el ID del empleado al que desea promover: ");
                             int num3 = int.Parse(Console.ReadLine());
+
                             Console.Write("Ingrese el puesto al que desea promoverlo: ");
                             string string4 = Console.ReadLine();
 
@@ -97,27 +96,27 @@ namespace PracticaEF.UI
                             employeesIntermedia.emplooyesList();
 
 
-                            break;
+                        break;
 
                         case 4:
                             
                             Console.Clear();
                             employeesIntermedia.emplooyesList();
                             
-                            break;
+                        break;
                            
                         case 5:
 
                             Console.Clear();
                             customersIntermedia.customersList();
 
-                            break;
+                        break;
 
                         default:
 
                             Console.WriteLine("Ingreso un valor incorrecto");
                         
-                            break;
+                        break;
                     }
                 }
 
@@ -128,12 +127,13 @@ namespace PracticaEF.UI
                 catch (ArgumentNullException)
                 {
                     Console.WriteLine();
+
                     Console.WriteLine("El empleado seleccionado no existe");
                 }
-                
-                catch(Exception e)
+
+                catch (Exception)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine("\nUPS!! Debe haber ocurrido un problema con uso de llaves foreaneas");
                 }
 
                 Console.WriteLine();

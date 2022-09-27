@@ -28,14 +28,15 @@ namespace PracticasBF.Logic
                 throw;
             }
         }
-        
         public void Delete(int id)
         {
             try
             {
-            var employeesEliminar = context.Employees.Find(id);
-            context.Employees.Remove(employeesEliminar);
-            context.SaveChanges();
+                var employeesEliminar = context.Employees.Find(id);
+
+                context.Employees.Remove(employeesEliminar);
+
+                context.SaveChanges();
             }
             catch (Exception)
             {

@@ -37,10 +37,9 @@ namespace PracticasBF.Logic
 
             catch (Exception)
             {
-                Console.WriteLine("\nUPS!! Ingresaste mal un dato");
-                Console.Read();
+                Console.WriteLine("\nUPS!! Ingresaste mal un dato, ingrese enter para continuar");
+                Console.ReadKey();
             }
-
         }
 
         public void deleteEmployee(int id)
@@ -52,8 +51,8 @@ namespace PracticasBF.Logic
             }
             catch (InvalidOperationException)
             {
-                Console.WriteLine("El ID ingresado no corresponde a ningun empleado");
-                Console.Read();
+                Console.WriteLine("El ID ingresado no corresponde a ningun empleado, ingrese enter para continuar");
+                Console.ReadKey();
             }
         }
 
@@ -70,8 +69,8 @@ namespace PracticasBF.Logic
             }
             catch (NullReferenceException)
             {
-                Console.WriteLine("No hay ningun empleado con ese ID");
-                Console.Read();
+                Console.WriteLine("No hay ningun empleado con ese ID, ingrese enter para continuar");
+                Console.ReadKey();
             }
         }
     }
