@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{951E5C39-2AC9-4D6A-8872-41FD37E7241A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PracticasBF.Logic</RootNamespace>
-    <AssemblyName>PracticasBF.Logic</AssemblyName>
+    <ProjectGuid>{2B8272B3-9AA3-4EFA-8204-06D8FFD00FBC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LINQ</RootNamespace>
+    <AssemblyName>LINQ</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -48,11 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseLogic.cs" />
-    <Compile Include="CustomersLogic.cs" />
-    <Compile Include="EmployeesLogic.cs" />
-    <Compile Include="IABMLogic.cs" />
-    <Compile Include="LINQLogic.cs" />
+    <Compile Include="LinqIntermedia.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,12 +60,16 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PracticaBF.Data\PracticaBF.Data.csproj">
-      <Project>{206EBA22-3961-417A-BF4B-0BA534E2730A}</Project>
+      <Project>{206eba22-3961-417a-bf4b-0ba534e2730a}</Project>
       <Name>PracticaBF.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\PracticaBF.Entities\PracticaBF.Entities.csproj">
-      <Project>{CDD665F5-508C-45DD-AB7B-253B87433B9B}</Project>
+      <Project>{cdd665f5-508c-45dd-ab7b-253b87433b9b}</Project>
       <Name>PracticaBF.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PracticasBF.Logic\PracticasBF.Logic.csproj">
+      <Project>{951e5c39-2ac9-4d6a-8872-41fd37e7241a}</Project>
+      <Name>PracticasBF.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
