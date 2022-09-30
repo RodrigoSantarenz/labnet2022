@@ -66,7 +66,7 @@ namespace LINQ
             var query7 = from customers in context.Customers
                          join orders in context.Orders on
                          customers.CustomerID equals orders.CustomerID
-                         where customers.Region == "WA" && orders.OrderDate > new DateTime(1997 / 1 / 1)
+                         where customers.Region == "WA" && orders.OrderDate > new DateTime (1997,01,01)
                          orderby orders.OrderDate
                          select new { customers, orders };
 
@@ -128,7 +128,7 @@ namespace LINQ
                           join orders in context.Orders on
                           customers.CustomerID equals orders.CustomerID
                           orderby customers.CustomerID
-                          select new { customers, orders};
+                          select new { customers, orders };
 
             foreach (var item in query13)
             {

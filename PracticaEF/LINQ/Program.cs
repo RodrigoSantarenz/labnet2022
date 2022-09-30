@@ -19,7 +19,7 @@ namespace LINQ
             int continuar;
             do
             {               
-                 Console.WriteLine("Los ejercicios van del 1 al 13\nElija en numero de ejercicio que desea ver");
+                 Console.WriteLine("Los ejercicios van del 1 al 13\nElija el numero de ejercicio que desea ver");
                  Console.WriteLine();
                  int seleccion = int.Parse(Console.ReadLine());
 

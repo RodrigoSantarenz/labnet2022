@@ -40,7 +40,7 @@ namespace PracticasBF.Logic
         {
             var query4 = context.Customers.Where(c => c.Region == "WA").ToList();
 
-            return query4.ToList();
+            return query4;
         }
 
         public Products ProductoID789()
