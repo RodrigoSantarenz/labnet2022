@@ -18,109 +18,118 @@ namespace LINQ
 
             int continuar;
             do
-            {               
-                 Console.WriteLine("Los ejercicios van del 1 al 13\nElija el numero de ejercicio que desea ver");
-                 Console.WriteLine();
-                 int seleccion = int.Parse(Console.ReadLine());
-
-                switch (seleccion)
+            {
+                try
                 {
-                    case 1:
+                    Console.WriteLine("Los ejercicios van del 1 al 13\nElija el numero de ejercicio que desea ver");
+                    Console.WriteLine();
+                    int seleccion = int.Parse(Console.ReadLine());
 
-                        Console.Clear();
-                        linq.Ejercicio1();
+                    switch (seleccion)
+                    {
+                        case 1:
 
-                        break;
+                            Console.Clear();
+                            linq.Ejercicio1();
 
-                    case 2:
+                            break;
 
-                        Console.Clear();
-                        linq.Ejercicio2();
+                        case 2:
 
-                        break;
+                            Console.Clear();
+                            linq.Ejercicio2();
 
-                    case 3:
+                            break;
 
-                        Console.Clear();
-                        linq.Ejercicio3();
+                        case 3:
 
-                        break;
+                            Console.Clear();
+                            linq.Ejercicio3();
 
-                    case 4:
+                            break;
 
-                        Console.Clear();
-                        linq.Ejercicio4();
+                        case 4:
 
-                        break;
+                            Console.Clear();
+                            linq.Ejercicio4();
 
-                    case 5:
+                            break;
 
-                        Console.Clear();
-                        linq.Ejercicio5();
+                        case 5:
 
-                        break;
+                            Console.Clear();
+                            linq.Ejercicio5();
 
-                    case 6:
-                        
-                        Console.Clear();
-                        linq.Ejercicio6();
+                            break;
 
-                        break;
+                        case 6:
 
-                    case 7:
+                            Console.Clear();
+                            linq.Ejercicio6();
 
-                        Console.Clear();
-                        linq.Ejercicio7();
-                        
-                        break;
+                            break;
 
-                    case 8:
-                       
-                        Console.Clear();
-                        linq.Ejercicio8();
-                        
-                        break;
-                    case 9:
-                        
-                        Console.Clear();
-                        linq.Ejercicio9();
-                        
-                        break;
-                    
-                    case 10:
-                        
-                        Console.Clear();
-                        linq.Ejercicio10();
-                       
-                        break;
-                    
-                    case 11:
-                        
-                        Console.Clear();
-                        linq.Ejercicio11();
-                        
-                        break;
-                    
-                    case 12:
-                        
-                        Console.Clear();
-                        linq.Ejercicio12();
-                        
-                        break;
-                    
-                    case 13:
-                        
-                        Console.Clear();
-                        linq.Ejercicio13();
-                        
-                        break;
+                        case 7:
 
-                    default:
+                            Console.Clear();
+                            linq.Ejercicio7();
+
+                            break;
+
+                        case 8:
+
+                            Console.Clear();
+                            linq.Ejercicio8();
+
+                            break;
+                        case 9:
+
+                            Console.Clear();
+                            linq.Ejercicio9();
+
+                            break;
+
+                        case 10:
+
+                            Console.Clear();
+                            linq.Ejercicio10();
+
+                            break;
+
+                        case 11:
+
+                            Console.Clear();
+                            linq.Ejercicio11();
+
+                            break;
+
+                        case 12:
+
+                            Console.Clear();
+                            linq.Ejercicio12();
+
+                            break;
+
+                        case 13:
+
+                            Console.Clear();
+                            linq.Ejercicio13();
+
+                            break;
+
+                        default:
 
                             Console.WriteLine("Ingreso un valor incorrecto");
 
-                        break;
+                            break;
+                    }
+
                 }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Solo numeros.");
+                }
+                 
                 
 
                 Console.WriteLine();

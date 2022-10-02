@@ -11,6 +11,7 @@ namespace LINQ
     internal class LinqIntermedia : LINQLogic 
     {
         LINQLogic linq = new LINQLogic();
+
         public void Ejercicio1()
         {
             foreach (Customers customers in linq.CustomersQuery())
@@ -122,17 +123,18 @@ namespace LINQ
             Console.WriteLine(linq.ejercicio12().ProductName);
         }
 
+
         public void Ejercicio13()
         {
             var query13 = from customers in context.Customers
-                          join orders in context.Orders on
-                          customers.CustomerID equals orders.CustomerID
-                          orderby customers.CustomerID
-                          select new { customers, orders };
+                          orderby customers.Orders.Count
+                          let cCount = customers.Orders.Count()
+                          select new { CompanyName = customers.CompanyName, CustomerID = customers.CustomerID, Count = cCount };
+
 
             foreach (var item in query13)
             {
-                Console.WriteLine($"{item.customers.CustomerID} - {item.customers.CompanyName} - {item.orders.OrderID}");
+                Console.WriteLine($"{item.CompanyName} - {item.Count}");
             }
         }
     }
