@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tp6</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> 
+</head>
+<body>
+    <div class= "contenedor">
+    <h1 class="titulo">Contacto</h1>
+    
+    <form id="form">
+        <h2>Informacion personal</h2>
+        <div class="contenedor-info">
+            <div class="form-grupo top">
+                <label for="nombre" class="label-titulo">Nombre</label>
+                <input type="text" class="form-control input-info" id="nombre" name="nombre">
+                <span class="span" id="span-nombre">No ingreso su nombre</span>
+            </div>
+            <div class="form-grupo top">
+                <label for="apellido" class="label-titulo">Apellido</label>
+                <input type="text" name="apellido" id="apellido" class="form-control input-info">
+                <span class="span" id="span-apellido">No ingreso su apellido</span>
+            </div>
+        </div>
+                
+        <div class="contenedor-edad-radio top">
+            <div class="margen-edad">
+                <div class="form-grupo">
+                    <label for="edad" class="label-titulo">Edad</label>
+                    <input type="text" class="form-control input-edad" id="edad" name="edad">
+                    <span class="span" id="span-edad">No ingreso su edad</span>
+                </div>
+            </div>
+            <div class="form-grupo radio-relativo">
+                <div><input type="radio" name="genero" value="masculino" class="radio-circulo"/> <span class="label-titulo">Masculino</span></div>
+                <div><input type="radio" name="genero" value="femenino" class="radio-circulo"/> <span class="label-titulo">Femenino</span></div>
+                <div><input type="radio" name="genero" value="Otro" class="radio-circulo"/> <span class="label-titulo">Otro</span></div>
+                <span class="span" id="span-genero">Seleccion su genero</span>
+            </div>
+        </div>
+
+        <h2>Informacion adicional</h2>
+        <div class="contenedor-info top">
+            <div class="form-grupo">
+                <label for = "empresa" class="label-titulo">Empresa</label>
+                <input type="text" class="form-control input-info" id="empresa" name="empresa">
+                <span class="span" id="span-empresa">No ingreso su empresa</span>
+            </div>
+        </div>
+        <div class="contenedor-botones">
+            <div class="text-center boton-margen">
+                <button type="submit" class="btn btn-primary button" id="enviar"><span class="button-texto">Enviar</span></button>
+            </div>
+            
+            <div class="text-center boton-margen">
+                <button class="btn btn-primary button" id="borrar"><span class="button-texto">Borrar</span></button>
+            </div>
+        </div>
+        
+    </form>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+body{
+    background-color: #0e0e0e !important;
+    color: #cacaca !important;
+}
+h2{
+    text-align: center;
+    margin-top: 30px !important;
+}
+.contenedor{
+    margin-top: 40px !important;
+}
+.titulo{
+    text-align: center;
+    font-family: "Microsoft Sans Serif";
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 72px !important;
+    line-height: 81px !important;
+}
+.label-titulo{
+    font-family: "Microsoft Sans Serif";
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 32px !important;
+    line-height: 36px !important;
+}
+.radio-circulo{
+    width: 30px !important;
+    height: 24px !important;
+    border-color: #cacaca !important;
+}
+.radio-relativo{
+    position: relative;
+    right: 70px;
+}
+.contenedor-edad-radio{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px !important;
+}
+
+.input-info{
+    width: 648px !important;
+    background-color: transparent !important;
+    border-radius: 30px !important;
+    color: #cacaca !important;
+}
+
+.input-edad{
+    width: 332px !important;
+    background-color: transparent !important;
+    border-radius: 30px !important;
+    color: #cacaca !important;
+}
+
+.contenedor-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.margen-edad{
+    margin-right: 145px;
+}
+
+.contenedor-botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boton-margen{
+    margin-top: 30px;
+}
+
+.button{
+    width: 276px !important;
+    background-color: transparent !important;
+    border-color: #cacaca !important;
+    border-radius: 30px !important;
+    
+}
+
+#enviar{
+    margin-right: 40px;
+}
+
+.button-texto{
+    width: 127px;
+    height: auto;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 34px !important;
+    line-height: 47px !important;
+    color: #cacaca;
+}
+
+.top{
+    margin-top: 20px !important;
+}
+
+.span{
+    display: none;
+    font-family: "Microsoft Sans Serif";
+    font-style: normal;
+    font-size: 16px !important;
+    margin-top: 10px !important;
+    margin-left : 16px !important; 
+    color: #9D1E1E;
+}
