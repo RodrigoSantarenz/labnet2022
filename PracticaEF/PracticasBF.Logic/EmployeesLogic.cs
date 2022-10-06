@@ -31,11 +31,11 @@ namespace PracticasBF.Logic
         public void Delete(int id)
         {
             try
-            {
+            { 
                 var employeesEliminar = context.Employees.Find(id);
 
                 context.Employees.Remove(employeesEliminar);
-
+              
                 context.SaveChanges();
             }
             catch (Exception)
@@ -58,5 +58,11 @@ namespace PracticasBF.Logic
                 throw;
             }
         }
+
+        public Employees GetOne(int id)
+        {
+            return context.Employees.Find(id);
+        }
+
     }
 }
