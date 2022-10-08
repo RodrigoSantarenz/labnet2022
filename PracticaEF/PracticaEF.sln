@@ -11,13 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaBF.Data", "Practica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaBF.Entities", "PracticaBF.Entities\PracticaBF.Entities.csproj", "{CDD665F5-508C-45DD-AB7B-253B87433B9B}"
 EndProject
-<<<<<<< Updated upstream
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{2B8272B3-9AA3-4EFA-8204-06D8FFD00FBC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{9BA882D0-BEE6-4572-A645-287E558C0BE8}"
 EndProject
->>>>>>> Stashed changes
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,8 +37,6 @@ Global
 		{CDD665F5-508C-45DD-AB7B-253B87433B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD665F5-508C-45DD-AB7B-253B87433B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD665F5-508C-45DD-AB7B-253B87433B9B}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< Updated upstream
-=======
 		{2B8272B3-9AA3-4EFA-8204-06D8FFD00FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2B8272B3-9AA3-4EFA-8204-06D8FFD00FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B8272B3-9AA3-4EFA-8204-06D8FFD00FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -50,7 +45,6 @@ Global
 		{9BA882D0-BEE6-4572-A645-287E558C0BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BA882D0-BEE6-4572-A645-287E558C0BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BA882D0-BEE6-4572-A645-287E558C0BE8}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

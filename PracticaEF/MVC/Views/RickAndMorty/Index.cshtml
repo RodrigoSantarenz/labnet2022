@@ -1,0 +1,27 @@
+﻿@model List<MVC.Models.RickAndMortyView>
+
+@{
+    ViewBag.Title = "rickMory page";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+         {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <th>@item.Name</th>
+                <th>@item.Status</th>
+            </tr>
+
+         }
+    </tbody>
+</table>
