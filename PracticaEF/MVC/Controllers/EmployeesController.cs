@@ -55,7 +55,7 @@ namespace MVC.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 return RedirectToAction("Index", "Error");
             }
