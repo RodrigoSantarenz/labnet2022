@@ -7,14 +7,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using WebApi.Models;
+
 
 namespace WebApi.Controllers
 {
     public class EmployeesController : ApiController
     {
-
         private EmployeesLogic logic = new EmployeesLogic();
 
         // GET: Api/Employees
@@ -177,7 +178,7 @@ namespace WebApi.Controllers
                 {
                     logic.Delete(id);
                     return Ok(employees);
-                }
+                }   
                 catch (Exception)
                 {
                     return InternalServerError();

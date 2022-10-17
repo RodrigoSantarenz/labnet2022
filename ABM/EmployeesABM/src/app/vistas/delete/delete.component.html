@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="container">
+    <h1>Dar baja a empleado</h1>
+    <form [formGroup]="obtenerEmpleado">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Id</label>
+            <input type="text" class="form-control" placeholder="Id" formControlName="Id" readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre" formControlName="Nombre" readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Apellido</label>
+            <input type="text" class="form-control" placeholder="Apellido" formControlName="Apellido" readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Puesto</label>
+            <input type="text" class="form-control" placeholder="Nuevo puesto" formControlName="Puesto" readonly>
+        </div>
+        <br><br>
+        <button type="button" class="btn btn-danger margen-btn" (click)="eliminar(datosEmpleado.Id)">Confirmar eleccion</button>
+        <button type="button" class="btn btn-dark" (click)="atras()" id="botonatras">Atras</button>
+    </form>
+</div>
+

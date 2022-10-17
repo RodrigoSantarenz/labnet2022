@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="container">
+    <h1>Promover empleado</h1>
+    <form [formGroup]="editarEmpleado" (ngSubmit)="postForm(editarEmpleado.value)" errorTailor>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Id</label>
+            <input type="text" class="form-control" placeholder="Id" formControlName="Id" readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre" formControlName="Nombre" readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Apellido</label>
+            <input type="text" class="form-control" placeholder="Apellido" formControlName="Apellido" readonly>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Puesto</label>
+            <input type="text" class="form-control" placeholder="Nuevo puesto" formControlName="Puesto" [controlErrorsTpl]="errorMsj">
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary margen-btn" [disabled]="!editarEmpleado.valid">Guardar cambios</button>
+        <button type="button" class="btn btn-dark" (click)="atras()" id="botonatras">Atras</button>
+    </form>
+</div>
+
+<ng-template let-error let-text="text" #errorMsj>
+    <b>Error:</b>
+    <div *ngIf="error?.minlength">
+        <i>Tienen que ser al menos 5 caracteres</i>
+    </div>
+    <div *ngIf="error?.required">
+        <i>No escribio nada</i>
+    </div>
+    <div *ngIf="error?.maxglength">
+        <i>Tienen que ser menos de 10 caracteres</i>
+    </div>
+    <div *ngIf="error?.pattern">
+        <i>numeros no validos</i>
+    </div>
+</ng-template>
+
+<app-footer></app-footer>

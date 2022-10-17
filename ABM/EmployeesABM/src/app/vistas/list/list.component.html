@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+
+<div class="container">
+  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Puesto</th>
+        <th scope="col" class="text-center">Dar baja</th>
+        <th scope="col" class="text-center">Promover</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados | slice:desde:hasta">
+        <th scope="row">{{ empleado.Id }}</th>
+        <td>{{empleado.Nombre}}</td>
+        <td>{{empleado.Apellido}}</td>
+        <td>{{empleado.Puesto}}</td>
+        <td><button mat-fab color="warn" class="boton" (click)="eliminar(empleado.Id)"><mat-icon>delete</mat-icon></button></td>
+        <td><button mat-fab color="accent"  (click)="promoverEmpleado(empleado.Id)"><mat-icon>create</mat-icon></button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button mat-icon-button color="primary" (click)="nuevoEmpleado()"><mat-icon>add</mat-icon> Nuevo empleado</button>
+</div>
+
+<mat-paginator [length]="empleados.length"
+              [pageSize]="pageSize"
+              (page)="cambiarPagina($event)"
+              aria-label="Select page">
+</mat-paginator>
+ 
+<!-- <app-footer></app-footer> -->

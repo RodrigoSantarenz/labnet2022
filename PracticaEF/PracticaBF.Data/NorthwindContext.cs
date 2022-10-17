@@ -24,6 +24,8 @@ namespace PracticaBF.Data
         public virtual DbSet<Suppliers> Suppliers { get; set; }
         public virtual DbSet<Territories> Territories { get; set; }
 
+        
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CustomerDemographics>()
@@ -42,7 +44,9 @@ namespace PracticaBF.Data
             modelBuilder.Entity<Employees>()
                 .HasMany(e => e.Employees1)
                 .WithOptional(e => e.Employees2)
-                .HasForeignKey(e => e.ReportsTo);
+                .HasForeignKey(e => e.ReportsTo)
+                .WillCascadeOnDelete(true);
+                 base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Employees>()
                 .HasMany(e => e.Territories)
@@ -64,7 +68,7 @@ namespace PracticaBF.Data
             modelBuilder.Entity<Orders>()
                 .HasMany(e => e.Order_Details)
                 .WithRequired(e => e.Orders)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Products>()
                 .Property(e => e.UnitPrice)
@@ -73,7 +77,7 @@ namespace PracticaBF.Data
             modelBuilder.Entity<Products>()
                 .HasMany(e => e.Order_Details)
                 .WithRequired(e => e.Products)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Region>()
                 .Property(e => e.RegionDescription)
@@ -82,12 +86,13 @@ namespace PracticaBF.Data
             modelBuilder.Entity<Region>()
                 .HasMany(e => e.Territories)
                 .WithRequired(e => e.Region)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Shippers>()
                 .HasMany(e => e.Orders)
                 .WithOptional(e => e.Shippers)
-                .HasForeignKey(e => e.ShipVia);
+                .HasForeignKey(e => e.ShipVia)
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Territories>()
                 .Property(e => e.TerritoryDescription)
