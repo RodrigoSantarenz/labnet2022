@@ -40,7 +40,8 @@ import { MatIconModule } from '@angular/material/icon';
           required: 'El campo es requerido',
           minlength: ({ requiredLength, actualLength }) => 
                       `Expect ${requiredLength} but got ${actualLength}`,
-          invalidAddress: error => `Address isn't valid`
+          maxlength: ({ requiredLength, actualLength }) => 
+                      `Expect ${requiredLength} but got ${actualLength}`
         }
       }
       

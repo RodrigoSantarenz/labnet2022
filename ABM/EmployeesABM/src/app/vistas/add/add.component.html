@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Puesto</label>
-            <input type="text" class="form-control" placeholder="puesto" formControlName="Puesto" [controlErrorsTpl]="errorMsj">
+            <input type="text" class="form-control" placeholder="puesto" formControlName="Puesto" [controlErrorsTpl]="puestoMsj">
         </div>
         <br><br>
         <button type="submit" class="btn btn-primary margen-btn" [disabled]="!agregarEmpleado.valid">Guardar cambios</button>
@@ -23,7 +23,6 @@
 </div>
 
 <ng-template let-error let-text="text" #errorMsj>
-    <!-- {{ error | json }} {{ text }} -->
     <b>Error:</b>
     <div *ngIf="error?.minlength">
         <i>Tienen que ser al menos 5 caracteres</i>
@@ -31,8 +30,24 @@
     <div *ngIf="error?.required">
         <i>No escribio nada</i>
     </div>
-    <div *ngIf="error?.maxglength">
+    <div *ngIf="error?.maxlength">
         <i>Tienen que ser menos de 10 caracteres</i>
+    </div>
+    <div *ngIf="error?.pattern">
+        <i>numeros no validos</i>
+    </div>
+</ng-template>
+
+<ng-template let-error let-text="text" #puestoMsj>
+    <b>Error:</b>
+    <div *ngIf="error?.minlength">
+        <i>Tienen que ser al menos 5 caracteres</i>
+    </div>
+    <div *ngIf="error?.required">
+        <i>No escribio nada</i>
+    </div>
+    <div *ngIf="error?.maxlength">
+        <i>Tienen que ser menos de 30 caracteres</i>
     </div>
     <div *ngIf="error?.pattern">
         <i>numeros no validos</i>
