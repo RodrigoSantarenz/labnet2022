@@ -25,7 +25,7 @@ export class UpdateComponent implements OnInit {
       Id: [''],
       Nombre: [''],
       Apellido: [''],
-      Puesto: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(30), Validators.pattern(/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/)]],
+      Puesto: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern(/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/)]],
     })
     let EmployeeId = this.activeRouter.snapshot.paramMap.get('id');
     this.api.getSingleEmployee(EmployeeId).subscribe(data =>{

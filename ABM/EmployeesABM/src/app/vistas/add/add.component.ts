@@ -19,19 +19,10 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
     this.agregarEmpleado = this.fb.group({
-      Nombre: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10), Validators.pattern(/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/)]],
-      Apellido: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10), Validators.pattern(/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/)]],
-      Puesto: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(30), Validators.pattern(/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/)]],
-    })
-    let EmployeeId = this.activeRouter.snapshot.paramMap.get('id');
-    this.api.getSingleEmployee(EmployeeId).subscribe(data =>{
-      this.datosEmpleado = data;
-      this.agregarEmpleado.setValue({
-       'Nombre': this.datosEmpleado.Nombre,
-       'Apellido': this.datosEmpleado.Apellido,
-       'Puesto': this.datosEmpleado.Puesto,
-      });
-    })  
+      Nombre: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(10), Validators.pattern(/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/)]],
+      Apellido: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(10), Validators.pattern(/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/)]],
+      Puesto: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(30), Validators.pattern(/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/)]],
+    }) 
   }
   
   postForm(forms:EmployeeI){
